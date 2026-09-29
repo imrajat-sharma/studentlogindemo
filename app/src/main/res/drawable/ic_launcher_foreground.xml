@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group
+        android:pivotX="54"
+        android:pivotY="54">
+        <!-- Graduation Cap (Mortarboard) -->
+        <!-- Diamond top of cap -->
+        <path
+            android:fillColor="#FBBF24"
+            android:pathData="M54,28 L78,39 L54,50 L30,39 Z" />
+        <!-- Cap skull cap base -->
+        <path
+            android:fillColor="#F59E0B"
+            android:pathData="M40,45.5 L40,56 C40,62 68,62 68,56 L68,45.5 L54,52 Z" />
+        <!-- Tassel cord and pendant -->
+        <path
+            android:strokeColor="#FFFFFF"
+            android:strokeWidth="2"
+            android:strokeLineCap="round"
+            android:pathData="M54,39 L78,44 L78,57" />
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M76,57 L80,57 L79,63 L77,63 Z" />
+
+        <!-- Student ID Card / Sheet -->
+        <!-- Card base plate -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M33,63 C33,60.8 34.8,59 37,59 L71,59 C73.2,59 75,60.8 75,63 L75,81 C75,83.2 73.2,85 71,85 L37,85 C34.8,85 33,83.2 33,81 Z" />
+        <!-- Student Avatar silhouette on card -->
+        <path
+            android:fillColor="#3B82F6"
+            android:pathData="M43,67 A3,3 0 1,0 43,73 A3,3 0 1,0 43,67 Z" />
+        <path
+            android:fillColor="#3B82F6"
+            android:pathData="M38,79 C38,76 40,75 43,75 C46,75 48,76 48,79 Z" />
+        <!-- Text lines on card -->
+        <path
+            android:fillColor="#94A3B8"
+            android:pathData="M53,67 L69,67 A1,1 0 0,0 69,65 L53,65 A1,1 0 0,0 53,67 Z" />
+        <path
+            android:fillColor="#94A3B8"
+            android:pathData="M53,72 L67,72 A1,1 0 0,0 67,70 L53,70 A1,1 0 0,0 53,72 Z" />
+        <!-- Verified green badge on card -->
+        <path
+            android:fillColor="#10B981"
+            android:pathData="M65,77 A3,3 0 1,0 65,83 A3,3 0 1,0 65,77 Z" />
+        <path
+            android:strokeColor="#FFFFFF"
+            android:strokeWidth="1"
+            android:strokeLineCap="round"
+            android:pathData="M63.5,80 L64.8,81.2 L66.5,78.8" />
+    </group>
+</vector>

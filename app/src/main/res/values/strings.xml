@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name">StudentLoginDemo</string>
+    
+    <!-- Registration Screen (Activity 1) -->
+    <string name="title_registration">Student Registration</string>
+    <string name="subtitle_registration">Academic Portal • Course Enrollment Demo</string>
+    <string name="label_name">Student Full Name</string>
+    <string name="hint_name">e.g. John Doe</string>
+    <string name="label_email">Email Address</string>
+    <string name="hint_email">e.g. john.doe@university.edu</string>
+    <string name="label_gender">Gender Selection</string>
+    <string name="gender_male">Male</string>
+    <string name="gender_female">Female</string>
+    <string name="gender_other">Other</string>
+    <string name="label_dob">Date of Birth</string>
+    <string name="hint_dob">Click calendar to select DOB</string>
+    <string name="btn_select_dob">Select Date</string>
+    <string name="label_course">Select Degree / Course</string>
+    <string name="terms_checkbox">I agree to Terms &amp; Conditions</string>
+    <string name="btn_submit">Submit Registration</string>
+    <string name="btn_clear">Clear Form</string>
+    <string name="btn_autofill">Sample Fill</string>
+
+    <!-- Validation and Dialogs -->
+    <string name="error_name_required">Please enter student name</string>
+    <string name="error_email_required">Please enter student email</string>
+    <string name="error_email_invalid">Please enter a valid email address</string>
+    <string name="error_gender_required">Please select a gender</string>
+    <string name="error_dob_required">Please select date of birth</string>
+    <string name="error_terms_required">You must accept Terms &amp; Conditions to proceed</string>
+    
+    <string name="dialog_confirm_title">Confirm Submission</string>
+    <string name="dialog_confirm_positive">Confirm &amp; Proceed</string>
+    <string name="dialog_confirm_negative">Cancel</string>
+
+    <!-- Display Details Screen (Activity 2) -->
+    <string name="title_display_details">Student Details &amp; Courses</string>
+    <string name="subtitle_display_details">Activity 2 • Explicit Intent Received</string>
+    <string name="table_header_title">Registered Student Profile</string>
+    <string name="col_field">Attribute</string>
+    <string name="col_value">Submitted Value</string>
+    <string name="row_reg_id">Registration ID</string>
+    <string name="row_name">Student Name</string>
+    <string name="row_email">Email Address</string>
+    <string name="row_gender">Gender</string>
+    <string name="row_dob">Date of Birth</string>
+    <string name="row_course">Selected Course</string>
+    <string name="row_terms">Terms Accepted</string>
+    <string name="row_timestamp">Submission Time</string>
+    
+    <string name="section_enrolled_courses">Enrolled Course Curriculum</string>
+    <string name="subtitle_enrolled_courses">Static Course Catalog (Minimum 5 Courses)</string>
+    <string name="label_filter_spinner">Filter by Specialization:</string>
+    <string name="btn_back_to_registration">Back to Registration</string>
+    
+    <!-- String Arrays -->
+    <string-array name="course_options">
+        <item>MCA (Master of Computer Applications)</item>
+        <item>MBA (Master of Business Administration)</item>
+        <item>BCA (Bachelor of Computer Applications)</item>
+    </string-array>
+
+    <string-array name="course_filter_options">
+        <item>All Enrolled Courses (6 Courses)</item>
+        <item>MCA Core Courses</item>
+        <item>MBA Core Courses</item>
+        <item>BCA Core Courses</item>
+    </string-array>
+</resources>

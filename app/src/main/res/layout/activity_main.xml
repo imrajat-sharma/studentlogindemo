@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <!-- Primary Layout: RelativeLayout as required by specification -->
+    <RelativeLayout
+        android:id="@+id/mainRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        tools:context=".MainActivity">
+
+        <!-- Top Header Card -->
+        <RelativeLayout
+            android:id="@+id/headerCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/card_bg"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/ivHeaderIcon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_school"
+                android:contentDescription="University Logo" />
+
+            <TextView
+                android:id="@+id/tvHeaderTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/ivHeaderIcon"
+                android:layout_marginStart="12dp"
+                android:text="@string/title_registration"
+                android:textColor="@color/primary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvHeaderSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvHeaderTitle"
+                android:layout_toEndOf="@id/ivHeaderIcon"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="2dp"
+                android:text="@string/subtitle_registration"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvLifecycleBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="#DBEAFE"
+                android:paddingStart="8dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="4dp"
+                android:text="Activity 1"
+                android:textColor="@color/primary"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <!-- Main Form Card Container (RelativeLayout inside) -->
+        <RelativeLayout
+            android:id="@+id/formCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/headerCard"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/card_bg"
+            android:padding="20dp">
+
+            <!-- 1. Editable TextView for Name -->
+            <TextView
+                android:id="@+id/tvLabelName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:text="@string/label_name"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/tvLabelName"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/input_field_bg"
+                android:hint="@string/hint_name"
+                android:inputType="textPersonName"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_muted"
+                android:textSize="15sp"
+                android:drawableStart="@drawable/ic_person"
+                android:drawablePadding="8dp" />
+
+            <!-- 2. Editable TextView for Email -->
+            <TextView
+                android:id="@+id/tvLabelEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etName"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="16dp"
+                android:text="@string/label_email"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/tvLabelEmail"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/input_field_bg"
+                android:hint="@string/hint_email"
+                android:inputType="textEmailAddress"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_muted"
+                android:textSize="15sp"
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="8dp" />
+
+            <!-- 3. RadioButtons for Gender selection -->
+            <TextView
+                android:id="@+id/tvLabelGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etEmail"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="16dp"
+                android:text="@string/label_gender"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rgGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvLabelGender"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/gender_male"
+                    android:textColor="@color/text_primary"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/gender_female"
+                    android:textColor="@color/text_primary"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbOther"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:text="@string/gender_other"
+                    android:textColor="@color/text_primary"
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+            <!-- 4. DatePicker for selecting Date of Birth -->
+            <TextView
+                android:id="@+id/tvLabelDob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rgGender"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="16dp"
+                android:text="@string/label_dob"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/rlDobContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvLabelDob"
+                android:layout_marginTop="6dp">
+
+                <TextView
+                    android:id="@+id/tvSelectedDob"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_toStartOf="@+id/btnSelectDob"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/input_field_bg"
+                    android:gravity="center_vertical"
+                    android:hint="@string/hint_dob"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_muted"
+                    android:textSize="14sp"
+                    android:drawableStart="@drawable/ic_calendar"
+                    android:drawablePadding="8dp" />
+
+                <Button
+                    android:id="@+id/btnSelectDob"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/btn_select_dob"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+            <!-- 5. Spinner for selecting a Course (MCA, MBA, BCA) -->
+            <TextView
+                android:id="@+id/tvLabelCourse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rlDobContainer"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="16dp"
+                android:text="@string/label_course"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/rlSpinnerContainer"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/tvLabelCourse"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/input_field_bg"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp">
+
+                <Spinner
+                    android:id="@+id/spinnerCourse"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:spinnerMode="dropdown" />
+            </RelativeLayout>
+
+            <!-- 6. CheckBox for 'I agree to Terms & Conditions' -->
+            <CheckBox
+                android:id="@+id/cbTerms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rlSpinnerContainer"
+                android:layout_marginTop="16dp"
+                android:minHeight="48dp"
+                android:text="@string/terms_checkbox"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp" />
+
+            <!-- Action Buttons in RelativeLayout -->
+            <RelativeLayout
+                android:id="@+id/rlActionButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cbTerms"
+                android:layout_marginTop="20dp">
+
+                <!-- Submit Button -->
+                <Button
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_alignParentTop="true"
+                    android:backgroundTint="@color/primary"
+                    android:text="@string/btn_submit"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <!-- Secondary utility buttons for quick testing -->
+                <Button
+                    android:id="@+id/btnAutofill"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_below="@id/btnSubmit"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/btnCenterGuide"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="6dp"
+                    android:text="@string/btn_autofill"
+                    android:textSize="12sp" />
+
+                <View
+                    android:id="@+id/btnCenterGuide"
+                    android:layout_width="1dp"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/btnSubmit"
+                    android:layout_centerHorizontal="true" />
+
+                <Button
+                    android:id="@+id/btnClear"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_below="@id/btnSubmit"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/btnCenterGuide"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/btn_clear"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!-- Lifecycle & State Monitor Card (Confirms onSaveInstanceState & Log.d) -->
+        <RelativeLayout
+            android:id="@+id/lifecycleCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/formCard"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/card_bg"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvLifecycleTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:text="Activity Lifecycle &amp; State Monitor"
+                android:textColor="@color/text_primary"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvLifecycleTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="TAG: StudentLoginDemo_Act1"
+                android:textColor="@color/text_muted"
+                android:textSize="10sp"
+                android:fontFamily="monospace" />
+
+            <TextView
+                android:id="@+id/tvLifecycleStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvLifecycleTitle"
+                android:layout_marginTop="6dp"
+                android:background="#F1F5F9"
+                android:padding="8dp"
+                android:text="Current State: Initializing...\nLogs logged via Log.d() &amp; data saved on rotation."
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp"
+                android:fontFamily="monospace" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>

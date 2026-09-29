@@ -1,0 +1,6 @@
+{
+  "name": "StudentLoginDemo",
+  "description": "Student registration and enrolled courses viewer with explicit Intent, AlertDialog confirmation, DatePicker, TableLayout, and lifecycle tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
