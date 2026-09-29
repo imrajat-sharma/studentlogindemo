@@ -1,8 +1,8 @@
 # Mobile Development College Project
 
-<img src="./screenshots/screenshot_1.png">
-<img src="./screenshots/screenshot_2png">
-<img src="./screenshots/screenshot_3png">
+<img src="./screenshots/screenshot_1.png" width="800" height="500">
+<img src="./screenshots/screenshot_2png" width="800" height="500">
+<img src="./screenshots/screenshot_3png" width="800" height="500">
 
 ## Run Locally
 
