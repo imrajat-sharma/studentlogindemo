@@ -1,5 +1,9 @@
 # Mobile Development College Project
 
+<img src="./screenshots/screenshot_1.png">
+<img src="./screenshots/screenshot_2png">
+<img src="./screenshots/screenshot_3png">
+
 ## Run Locally
 
 **Prerequisites:**  [Android Studio](https://developer.android.com/studio)
